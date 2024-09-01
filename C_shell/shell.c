@@ -23,8 +23,9 @@ int main()
     int n;
     char cmd[BUFFSIZE];
     char cwd[BUFFSIZE];
-    getcwd(cwd, sizeof(cwd));    // Get current working directory
-    char *home = getenv("HOME"); // Get users home directory 
+    getcwd(cwd, sizeof(cwd));    // working directory
+
+    char *home = getenv("HOME"); // home  
     chdir(home);
 
 
@@ -33,7 +34,7 @@ int main()
         while (1) {
                 printf("Shell:");
                 
-        getcwd(cwd, sizeof(cwd));    // Gets current working directory
+        getcwd(cwd, sizeof(cwd));    //  working directory
 
 
 
@@ -58,11 +59,7 @@ int main()
                         cmd[n-1] = '\0'; // replaces the final '\n' character with '\0' to make a proper string
 
 
-                        // Lab 06 TODO: parse/tokenize cmd by space to prepare the
-                        // command line argument array that is required by execvp().
-                        // For example, if cmd is "head -n 1 file.txt", then the
-                        // command line argument array needs to be
-                        // ["head", "-n", "1", "file.txt", NULL].
+        
 
 //            printf("%s\n", getcwd(cwd, BUFFSIZE));
 
@@ -111,7 +108,7 @@ int main()
             }
 
             if ((pid = fork()) < 0) perror("fork");
-            else if (pid == 0) { // child process
+            else if (pid == 0) { // child 
 
 
 
@@ -137,9 +134,9 @@ int main()
 
 
                 // if
-                //if execvp ran succesfully, then it will not be able to return here
+            
                
-            } else {    // parent process
+            } else { // parent cakk
                 int status;
                 wait(&status);
                
