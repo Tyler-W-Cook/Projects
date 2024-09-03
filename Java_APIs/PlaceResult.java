@@ -1,4 +1,4 @@
-package cs1302.api;
+package Java_APIs;
 
 public class PlaceResult {
     String place;

@@ -1,4 +1,4 @@
-package cs1302.api;
+package Java_APIs;
 
 public class DailyResults {
     String [] temperature_2m_max;
